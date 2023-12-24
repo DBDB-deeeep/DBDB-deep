@@ -15,10 +15,8 @@ public class LoginController implements Controller {
         String passwd = request.getParameter("password");
         
         try {
-            // 모델에 로그인 처리를 위임
             UserManager manager = UserManager.getInstance();
             User user = manager.login(email, passwd);
-//            manager.login(email, password);
     
             // 세션에 사용자 이이디 저장
             HttpSession session = request.getSession();
@@ -28,9 +26,6 @@ public class LoginController implements Controller {
             System.out.println("로그인 성공");
             return "redirect:/product/list";        
         } catch (Exception e) {
-            /* UserNotFoundException이나 PasswordMismatchException 발생 시
-             * 다시 login form을 사용자에게 전송하고 오류 메세지도 출력
-             */
             request.setAttribute("loginFailed", true);
             request.setAttribute("exception", e);
             System.out.println("로그인 실패");

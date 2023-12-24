@@ -18,7 +18,6 @@ public class AddCartItemController implements Controller{
 		HttpSession session = request.getSession();
     	int customerId = (int) session.getAttribute("customerId");
     	int productId = Integer.parseInt(request.getParameter("id"));
-        //int quantity = Integer.parseInt(request.getParameter("quantity"));
     	String rentalFeeParam = request.getParameter("rentalFee");
     	int rentalFee = 0; // 기본값 설정
     	if (rentalFeeParam != null && !rentalFeeParam.isEmpty()) {
