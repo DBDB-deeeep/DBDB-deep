@@ -17,7 +17,8 @@
         <c:forEach var="rent" items="${rents}" varStatus="status">
             {
                 startDay: new Date("${rent.start_day}"),
-                endDay: new Date("${rent.end_day}")
+                endDay: new Date("${rent.end_day}"),
+                status: ${rent.status} // status 속성 추가
             }<c:if test="${!status.last}">,</c:if>
         </c:forEach>
     ];
