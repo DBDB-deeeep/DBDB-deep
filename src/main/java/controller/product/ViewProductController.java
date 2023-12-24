@@ -48,16 +48,9 @@ public class ViewProductController implements Controller {
             
             return "/product/view.jsp";
         } catch (Exception e) {
-//            logger.error("Error ordering product", e);
             request.setAttribute("error", "상세 페이지 출력 중 에러 발생");          
             return "redirect:/product/list"; // 대여 실패 시 상품 리스트 페이지로 리디렉션
         }
-
-
-        
-
-        
-        
     }
 
 }

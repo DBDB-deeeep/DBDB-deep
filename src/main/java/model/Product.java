@@ -7,7 +7,6 @@ public class Product {
     private int rentalFee;
     private String description;
     private int deposit;
-//    private String rentalLocation;
     private String productPhoto;
     private String address;
     private String detailAddress;
@@ -24,7 +23,6 @@ public class Product {
         this.rentalFee = rentalFee;
         this.description = description;
         this.deposit = deposit;
-//        this.rentalLocation = rentalLocation;
         this.productPhoto = productPhoto;
         this.address = address;
         this.detailAddress = detailAddress;
@@ -128,19 +126,6 @@ public class Product {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-    
-    
-
-//    public String getRentalLocation() {
-//        return rentalLocation;
-//    }
-//
-//    public void setRentalLocation(String rentalLocation) {
-//        this.rentalLocation = rentalLocation;
-//    }
-    
-    
-    
+    }    
    
 }
